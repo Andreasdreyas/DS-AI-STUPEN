@@ -91,8 +91,8 @@ options = {
     "Contract": ["","Month-to-month", "One year", "Two year"],
     "Paperless Billing": ["","No", "Yes"],
     "Payment Method": ["","Mailed check", "Electronic check", "Bank transfer (automatic)", "Credit card (automatic)"],
-    "Monthly Charges": None,
-    "Total Charges": None,
+    "Monthly Charges ($)": None,
+    "Total Charges ($)": None,
     "Model Type": ["", "Random Forest", "ANN", "SVM", "XG-Boost"]
 }
 
@@ -140,7 +140,7 @@ def preprocess_input(data_input, encoders, scaler):
             else:
                 df[col] = -1 
     
-    cols_to_scale = ['Tenure Months', 'Monthly Charges', 'Total Charges']
+    cols_to_scale = ['Tenure Months', 'Monthly Charges ($)', 'Total Charges ($)']
     try:
         df[cols_to_scale] = scaler.transform(df[cols_to_scale])
     except Exception as e:
@@ -383,4 +383,5 @@ if st.button("🔍 Prediksi & Analisis"):
                 st.warning("Silakan pilih tipe model terlebih dahulu.")
                 
         except Exception as e:
+
             st.error(f"Terjadi kesalahan sistem: {e}")
