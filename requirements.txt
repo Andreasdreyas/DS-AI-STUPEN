@@ -1,0 +1,10 @@
+streamlit
+pandas
+numpy
+joblib
+shap
+scikit-learn
+xgboost
+langchain-google-genai
+matplotlib
+tensorflow
