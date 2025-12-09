@@ -373,7 +373,7 @@ if st.button("🔍 Prediksi & Analisis"):
                                 ("human", user_prompt)
                             ])
                
-                            st.info("💡 **Analisis Cerdas & Strategi:**")
+                            st.info("💡 **Analisis Cerdas & Strategi**")
                             st.write(response.content)
                             
                         except Exception as e:
@@ -385,4 +385,5 @@ if st.button("🔍 Prediksi & Analisis"):
         except Exception as e:
 
             st.error(f"Terjadi kesalahan sistem: {e}")
+
 
