@@ -361,6 +361,7 @@ if st.button("🔍 Prediksi & Analisis"):
 
                             FITUR DAN SHAP VALUES (pengaruh terhadap churn):
                             {faktor_utama}
+                            {detail_faktor}
 
                             Tolong jelaskan:
                             1. Mengapa pelanggan ini diprediksi churn / tidak churn
@@ -385,5 +386,6 @@ if st.button("🔍 Prediksi & Analisis"):
         except Exception as e:
 
             st.error(f"Terjadi kesalahan sistem: {e}")
+
 
 
